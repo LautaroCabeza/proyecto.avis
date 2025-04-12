@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVIS - Simulador de Vuelo Educativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="navbar-logo">
+                <svg width="40" height="40" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="#1a4b8c" />
+                    <path d="M20,50 L80,50" stroke="#ffffff" stroke-width="4" />
+                    <path d="M50,20 L50,80" stroke="#ffffff" stroke-width="4" />
+                    <path d="M30,30 L70,70" stroke="#ffffff" stroke-width="4" />
+                    <path d="M30,70 L70,30" stroke="#ffffff" stroke-width="4" />
+                    <circle cx="50" cy="50" r="10" fill="#f39c12" />
+                </svg>
+                <h1>AVIS</h1>
+            </div>
+            <ul class="navbar-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyecto">Proyecto</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#about">Quiénes Somos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li class="cta-button">
+                    <a href="#reserva" class="btn btn-primary">Reservar Experiencia</a>
+                </li>
+            </ul>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="clouds">
+            <div class="cloud" style="top: 20%; animation-duration: 60s;"></div>
+            <div class="cloud" style="top: 30%; animation-duration: 75s; animation-delay: 10s;"></div>
+            <div class="cloud" style="top: 60%; animation-duration: 90s; animation-delay: 20s;"></div>
+        </div>
+        <img src="images\avion.png" alt="Avión" class="plane">
+        <div class="container hero-content">
+            <h1>AVIS - Simulador de Vuelo Educativo</h1>
+            <p>Experimenta la realidad de volar un Cessna 172</p>
+            <a href="#proyecto" class="btn btn-primary">Conoce más</a>
+        </div>
+    </section>
+
+    <!-- Proyecto Section -->
+    <section id="proyecto" class="proyecto">
+        <div class="container">
+            <h2 class="section-title">¿De qué trata?</h2>
+            <div class="proyecto-container">
+                <div class="proyecto-info">
+                    <p>AVIS es un simulador de vuelo educativo de última generación diseñado para proporcionar una experiencia inmersiva y realista de pilotaje de aeronaves. Nuestro simulador recrea con precisión la cabina de un Cessna 172, una de las aeronaves de entrenamiento más populares del mundo.</p>
+                    <p>El sistema integra tecnología de movimiento físico para simular las sensaciones reales que experimenta un piloto durante el vuelo. Esto incluye aceleraciones, turbulencias, despegues y aterrizajes, proporcionando una experiencia de aprendizaje aeronáutico incomparable.</p>
+                    <p>Desarrollado por un equipo de pilotos profesionales e ingenieros especializados, AVIS representa el futuro de la formación aeronáutica, permitiendo a los estudiantes adquirir experiencia práctica en un entorno seguro y controlado.</p>
+                    <a href="#caracteristicas" class="btn btn-secondary">Descubrir características</a>
+                </div>
+                <div class="proyecto-image">
+                    <img src="images\simulador.png" alt="Simulador AVIS Cessna 172">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="counter-section">
+        <div class="container">
+            <div class="counter-container">
+                <div class="counter-item">
+                    <div class="counter" data-target="3500">0</div>
+                    <div class="counter-text">Estudiantes Formados</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter" data-target="12000">0</div>
+                    <div class="counter-text">Horas de Vuelo Simuladas</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter" data-target="98">0</div>
+                    <div class="counter-text">% de Satisfacción</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características Section -->
+    <section id="caracteristicas" class="caracteristicas">
+        <div class="container">
+            <h2 class="section-title">Características del simulador</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Cabina Realista</h3>
+                    <p>Réplica exacta de la cabina de un Cessna 172 con controles e instrumentos funcionales, asientos ergonómicos y dimensiones precisas.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>Movimiento Físico</h3>
+                    <p>Sistema hidráulico de 6 grados de libertad que reproduce fielmente las sensaciones de vuelo, turbulencias y maniobras.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Software Avanzado</h3>
+                    <p>Programa de simulación profesional con física de vuelo realista, condiciones meteorológicas variables y escenarios de emergencia.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3>Experiencia Inmersiva</h3>
+                    <p>Pantallas de alta resolución con visión panorámica de 220° y sistema de sonido que reproduce con precisión los sonidos de la aeronave.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Aprendizaje Guiado</h3>
+                    <p>Instructores certificados que adaptan las sesiones según el nivel del estudiante y objetivos de aprendizaje específicos.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificación</h3>
+                    <p>Horas acreditables para licencias de piloto privado según normativas aeronáuticas vigentes.</p>
+                </div>
+            </div>
+            
+            <!-- Panel de instrumentos interactivo -->
+            <div class="instrument-panel">
+                <div class="instrument">
+                    <div class="altimeter-numbers"></div>
+                    <div class="altimeter-needle"></div>
+                    <div class="instrument-label">Altímetro</div>
+                </div>
+                <div class="instrument">
+                    <div class="airspeed-numbers"></div>
+                    <div class="airspeed-needle"></div>
+                    <div class="instrument-label">Velocidad</div>
+                </div>
+                <div class="instrument">
+                    <div class="heading-indicator"></div>
+                    <div class="instrument-label">Dirección</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section id="beneficios" class="beneficios">
+        <div class="container">
+            <h2 class="section-title">Beneficios educativos</h2>
+            <div class="beneficios-container">
+                <div class="beneficios-list">
+                    <div class="beneficio-item">
+                        <div class="beneficio-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div>
+                            <h3>Desarrollo de habilidades técnicas</h3>
+                            <p>Aprende procedimientos de vuelo, comunicación aeronáutica y manejo de instrumentos sin riesgos.</p>
+                        </div>
+                    </div>
+                    <div class="beneficio-item">
+                        <div class="beneficio-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Entrenamiento de seguridad</h3>
+                            <p>Practica situaciones de emergencia y procedimientos críticos en un entorno controlado.</p>
+                        </div>
+                    </div>
+                    <div class="beneficio-item">
+                        <div class="beneficio-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div>
+                            <h3>Reducción de costos</h3>
+                            <p>Disminuye significativamente el costo de la formación aeronáutica al complementar horas reales con simuladas.</p>
+                        </div>
+                    </div>
+                    <div class="beneficio-item">
+                        <div class="beneficio-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3>Formación integral</h3>
+                            <p>Adquiere conocimientos teóricos y prácticos en un mismo espacio educativo con retroalimentación inmediata.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="beneficios-image">
+                    <img src="images\estudiantes.png" alt="Estudiante en simulador AVIS">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">¿Quiénes somos?</h2>
+            <div class="about-container">
+                <div class="about-info">
+                    <p>AVIS nació en 2020 de la colaboración entre pilotos profesionales, ingenieros aeronáuticos y educadores, con la visión de revolucionar la formación de pilotos mediante tecnología avanzada y pedagogía innovadora.</p>
+                    <p>Nuestra misión es democratizar el acceso a la formación aeronáutica de alta calidad, proporcionando herramientas que combinen la precisión técnica con la experiencia práctica, preparando a los futuros pilotos para enfrentar los desafíos reales de la aviación.</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h3>2020</h3>
+                            <p>Fundación del proyecto e investigación inicial sobre simuladores de vuelo educativos.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>2021</h3>
+                            <p>Desarrollo del primer prototipo y pruebas con estudiantes de aviación.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>2022</h3>
+                            <p>Lanzamiento oficial del simulador AVIS y primeras colaboraciones con escuelas de vuelo.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>2023-Hoy</h3>
+                            <p>Expansión nacional e implementación de nuevas características basadas en feedback de usuarios.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images\personas.png" alt="Equipo AVIS">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Section -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2 class="section-title">Galería</h2>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="images\personas.png" alt="Simulador AVIS - Vista frontal">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images\estudiantes.png" alt="Simulador AVIS - Cabina">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images\estudiantes.png" alt="Simulador AVIS - Instrumentos">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images\estudiantes.png" alt="Simulador AVIS - En uso">
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-control prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-control next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-indicators"></div>
+            </div>
+            <!-- Comentado hasta que tengan videos
+             
+            <div class="video-gallery">
+                <h3>Videos demostrativos</h3>
+                <div class="video-container">
+                    <div class="video-item">
+                        <img src="/api/placeholder/400/250" alt="Video simulador" class="video-thumbnail">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <p>Demostración del simulador en acción</p>
+                    </div>
+                    <div class="video-item">
+                        <img src="/api/placeholder/400/250" alt="Video testimonios" class="video-thumbnail">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <p>Testimonios de estudiantes</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>¿Qué requisitos debo cumplir para usar el simulador?</h3>
+                        <div class="accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>No se requiere experiencia previa en aviación. El simulador está disponible para personas mayores de 14 años. Para menores, se requiere acompañamiento de un adulto. Se recomienda vestimenta cómoda y no tener problemas graves de movilidad.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>¿Las horas en el simulador cuentan para la licencia de piloto?</h3>
+                        <div class="accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Sí, nuestro simulador cuenta con certificación que permite acreditar hasta un 20% de las horas requeridas para la licencia de piloto privado, según la normativa aeronáutica vigente. Se entrega certificado oficial al finalizar cada sesión.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>¿Cómo puedo reservar una sesión?</h3>
+                        <div class="accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Puede reservar mediante nuestro sistema online, llamando al centro o enviando un correo electrónico. Las sesiones tienen una duración de 60, 90 o 120 minutos y se recomienda reservar con al menos 48 horas de anticipación.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>¿Es seguro el simulador para personas con vértigo?</h3>
+                        <div class="accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>El simulador cuenta con diferentes niveles de intensidad de movimiento. Para personas con sensibilidad al vértigo, comenzamos con configuraciones suaves y aumentamos gradualmente según la comodidad del usuario. Puede detenerse la sesión en cualquier momento si se experimenta malestar.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>¿Ofrecen cursos completos o solo sesiones individuales?</h3>
+                        <div class="accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Ofrecemos ambas modalidades. Contamos con sesiones individuales para quienes desean una experiencia puntual, y programas estructurados de 10, 20 y 40 horas para quienes buscan formación sistemática. Los programas incluyen material didáctico y evaluaciones de progreso.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>¿Qué aeropuertos y escenarios están disponibles en el simulador?</h3>
+                        <div class="accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>El simulador incluye más de 24,000 aeropuertos de todo el mundo con datos geográficos precisos. Los escenarios principales incluyen las principales ciudades españolas, europeas y norteamericanas, con condiciones meteorológicas y horarios personalizables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contacto-container">
+                <div class="contacto-form">
+                    <form id="form-contacto">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" class="form-control" required>
+                            <div class="error-message">Por favor ingrese su nombre completo</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" class="form-control" required>
+                            <div class="error-message">Por favor ingrese un correo electrónico válido</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" class="form-control" required>
+                            <div class="error-message">Por favor ingrese el asunto</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" class="form-control" rows="6" required></textarea>
+                            <div class="error-message">Por favor ingrese su mensaje</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                    </form>
+                </div>
+                <div class="contacto-info">
+                    <h3>Información de contacto</h3>
+                    <div class="contacto-info-item">
+                        <div class="contacto-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p>Aeropuerto de Cuatro Vientos, Hangar 7</p>
+                            <p>28054 Madrid, España</p>
+                        </div>
+                    </div>
+                    <div class="contacto-info-item">
+                        <div class="contacto-info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <p>+34 912 345 678</p>
+                        </div>
+                    </div>
+                    <div class="contacto-info-item">
+                        <div class="contacto-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p>info@avis-simulador.es</p>
+                        </div>
+                    </div>
+                    <div class="contacto-info-item">
+                        <div class="contacto-info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <p>Lunes a Viernes: 9:00 - 20:00</p>
+                            <p>Sábados: 10:00 - 18:00</p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <img src="/api/placeholder/500/300" alt="Mapa de ubicación">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <svg width="40" height="40" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="#ffffff" />
+                            <path d="M20,50 L80,50" stroke="#1a4b8c" stroke-width="4" />
+                            <path d="M50,20 L50,80" stroke="#1a4b8c" stroke-width="4" />
+                            <path d="M30,30 L70,70" stroke="#1a4b8c" stroke-width="4" />
+                            <path d="M30,70 L70,30" stroke="#1a4b8c" stroke-width="4" />
+                            <circle cx="50" cy="50" r="10" fill="#f39c12" />
+                        </svg>
+                        <h3>AVIS</h3>
+                    </div>
+                    <p>Simulador de vuelo educativo que recrea la experiencia de pilotaje de forma inmersiva y profesional.</p>
+                    <div class="social-links">
+                        <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+                        <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+                        <a href="https://www.instagram.com/proyecto.avis/"><i class="fab fa-instagram"></i></a>
+                        <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+                        <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#proyecto">Proyecto</a></li>
+                        <li><a href="#caracteristicas">Características</a></li>
+                        <li><a href="#beneficios">Beneficios</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Recursos educativos</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Certificaciones</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Política de cookies</a></li>
+                        <li><a href="#">Aviso legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AVIS Simulador de Vuelo Educativo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
