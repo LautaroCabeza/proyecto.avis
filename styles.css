@@ -605,7 +605,28 @@
     margin-bottom: 2rem;
     opacity: 0;
     transform: translateX(-20px);
-    animation: slide-in 0.6s ease forwards;
+    /* Elimina esta línea: animation: slide-in 0.6s ease forwards; */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Añade una transición para la activación posterior */
+  }
+
+  .beneficio-item.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .beneficios-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateX(50px); /* Desplazado a la derecha */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .beneficios-image.animate {
+    opacity: 1;
+    transform: translateX(0);
   }
   
   .beneficio-item:nth-child(2) {
