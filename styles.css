@@ -131,16 +131,7 @@
     box-shadow: var(--box-shadow);
     transition: var(--transition);
   }
-  
-  .navbar.transparent {
-    background-color: transparent;
-    box-shadow: none;
-  }
-  
-  .navbar.transparent .navbar-logo h1,
-  .navbar.transparent .navbar-links a {
-    color: var(--white);
-  }
+
   
   .navbar.scrolled {
     padding: 0.5rem 0;
@@ -210,7 +201,7 @@
     width: 30px;
     height: 3px;
     background-color: var(--blue-primary);
-    margin: 3px 0;
+    margin: 3px 10vw;
     transition: var(--transition);
   }
   
