@@ -717,161 +717,37 @@
   }
   
   /* Galería Section */
-  .galeria {
-    padding: 6rem 0;
-    background-color: var(--white);
-  }
-  
-  .carousel {
-    position: relative;
-    margin-bottom: 4rem;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
-  }
-  
-  .carousel-inner {
+  .gallery-wrap {
     display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .carousel-item {
-    min-width: 100%;
-    overflow: hidden;
-  }
-  
-  .carousel-item img {
+    flex-direction: row;
     width: 100%;
-    max-height: 80vh; /* No más del 90% del alto de la pantalla */
-    object-fit: contain; /* O 'cover' si preferís recortar para que ocupe toda el área */
-    transition: transform 0.5s ease;
-  }
-   
-  
-  .carousel-item:hover img {
-    transform: scale(1.05);
-  }
-  
-  .carousel-controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-    z-index: 2;
-  }
-  
-  .carousel-control {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: var(--white);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: var(--transition);
-  }
-  
-  .carousel-control:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .carousel-indicators {
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 0.5rem;
-  }
-  
-  .indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: var(--transition);
-  }
-  
-  .indicator.active {
-    background-color: var(--white);
-  }
-  
-  .video-gallery {
-    margin-top: 4rem;
-  }
-  
-  .video-gallery h3 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .video-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .video-item {
-    position: relative;
-    width: 400px;
-    border-radius: 10px;
+    height: auto;
+    gap: 0.5vmin; /* Reducimos un poco el gap para que haya menos espacio "vacío" */
+}
+
+.item {
+    flex: 1;
+    height: auto;
     overflow: hidden;
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-  }
-  
-  .video-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--box-shadow-hover);
-  }
-  
-  .video-thumbnail {
+    transition: flex 0.5s ease, filter 0.3s ease; /* Ajustamos las duraciones de las transiciones */
+}
+
+.item img {
+    display: block;
     width: 100%;
-    transition: var(--transition);
-  }
-  
-  .video-item:hover .video-thumbnail {
-    transform: scale(1.05);
-  }
-  
-  .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 1.5rem;
-    transition: var(--transition);
-  }
-  
-  .video-item:hover .play-button {
-    background-color: var(--orange);
-    transform: translate(-50%, -50%) scale(1.1);
-  }
-  
-  .video-item p {
-    text-align: center;
-    padding: 1rem;
-    margin: 0;
-    background-color: var(--white);
-  }
-  
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1) brightness(0.75);
+    transition: filter 0.3s ease; /* Transición solo para el filtro */
+}
+
+.item:hover {
+    flex: 5; /* Reducimos la cantidad de expansión al hacer hover */
+}
+
+.item:hover img {
+    filter: grayscale(0) brightness(1.15);
+}
   /* FAQ Section */
   .faq {
     padding: 6rem 0;
@@ -930,6 +806,128 @@
     padding: 0 1.5rem 1.5rem;
     max-height: 300px;
   }
+  /* Estilos para la galería de escritorio (por defecto) */
+.gallery-desktop {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  gap: 0.5vmin;
+}
+
+.gallery-desktop .item {
+  flex: 1;
+  height: auto;
+  overflow: hidden;
+  transition: flex 0.5s ease, filter 0.3s ease;
+}
+
+.gallery-desktop .item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) brightness(0.75);
+  transition: filter 0.3s ease;
+}
+
+.gallery-desktop .item:hover {
+  flex: 5;
+}
+
+.gallery-desktop .item:hover img {
+  filter: grayscale(0) brightness(1.15);
+}
+
+/* Ocultar el carrusel móvil por defecto */
+.carousel-mobile {
+  display: none;
+}
+
+/* Estilos para pantallas más pequeñas (ej. tablets y móviles) */
+@media (max-width: 768px) {
+  /* Ocultar la galería de escritorio */
+  .gallery-desktop {
+      display: none;
+  }
+
+  /* Mostrar el carrusel móvil */
+  .carousel-mobile {
+      display: block;
+      position: relative;
+      margin-bottom: 2rem; /* Ajusta el margen inferior si es necesario */
+      overflow: hidden;
+      border-radius: 10px; /* Si quieres bordes redondeados */
+      box-shadow: var(--box-shadow); /* Si tienes definida esta variable */
+  }
+
+  .carousel-mobile .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease;
+  }
+
+  .carousel-mobile .carousel-item {
+      min-width: 100%;
+      overflow: hidden;
+  }
+
+  .carousel-mobile .carousel-item img {
+      width: 100%;
+      max-height: 70vh; /* Ajusta la altura máxima según necesites */
+      object-fit: contain; /* O 'cover' si prefieres recortar */
+  }
+
+  .carousel-mobile .carousel-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
+      z-index: 2;
+  }
+
+  .carousel-mobile .carousel-control {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: var(--white);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+  }
+
+  .carousel-mobile .carousel-control:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .carousel-mobile .carousel-indicators {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.5rem;
+  }
+
+  .carousel-mobile .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: var(--transition);
+  }
+
+  .carousel-mobile .indicator.active {
+      background-color: var(--white);
+  }
+}
   
   /* Contact Section */
 .contacto {
